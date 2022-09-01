@@ -1,0 +1,40 @@
+---
+title: "Suicide Rate Around the World"
+author: "   by Shirel"
+output:
+ rmdformats::readthedown:
+   highlight: kate
+runtime: shiny
+---
+
+## World Map by Year
+
+Here is a visualization of suicide rate throughout the globe.  
+
+We can see by the colors that the differences between the suicide rate in different countries are large in the beginning of the 2000s, but they become smaller later on.  
+
+```{r emb_shiny_dir_map, echo=F, warning=F}
+shiny::shinyAppDir(
+  appDir = "myshinyapp_map",
+  options = list(
+    width = "100%" , height = 650
+  )
+)
+```
+  
+
+
+## By Country
+
+Perhaps explaining the trend of the differences, different coutries have very diverse patterns of suicide rate over the years.
+
+Here you can view suicide rate over the years in each country. 
+
+```{r emb_shiny_dir_graph, echo=F, warning=F}
+shiny::shinyAppDir(
+  appDir = "myshinyapp_graph",
+  options = list(
+    width = "100%", height = 550
+  )
+)
+```
